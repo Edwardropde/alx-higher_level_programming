@@ -1,8 +1,6 @@
 #!/usr/bin/python3
+"""This module defines an empty Rectangle class."""
 
 class Rectangle:
-    """A class that defines a rectangle."""
-
-    # The pass statement is used to show empty class
-    # You can add attributes and methods
+    """Reps rectangle with 0 attributes or methods"""
     pass

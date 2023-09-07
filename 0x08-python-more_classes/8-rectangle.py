@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""The module defines a rectangle with private attributes"""
 
 class Rectangle:
     """

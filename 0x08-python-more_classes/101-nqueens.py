@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Solves the N Queens puzzle and prints all possible solutions"""
 
 import sys
 

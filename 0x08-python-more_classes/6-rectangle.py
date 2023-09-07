@@ -1,4 +1,5 @@
-#!/usr/bin/python3
+#!/usr/bin/pythoni3
+"""This module defines a Rectangle class with private attributes"""
 
 class Rectangle:
     """
