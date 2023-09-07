@@ -32,7 +32,7 @@ class Rectangle:
         Returns:
             Rectangle width
         """
-        return (self.__width)
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -60,7 +60,7 @@ class Rectangle:
         Returns:
             Rectangle height
         """
-        return (self.__height)
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -87,7 +87,7 @@ class Rectangle:
         Returns:
             Rectangle area
         """
-        return (self.__width * self.__height)
+        return self.__width * self.__height
 
     def perimeter(self):
         """
@@ -97,26 +97,26 @@ class Rectangle:
             Rectangle perimeter
         """
         if self.__width == 0 or self.__height == 0:
-            return (0)
-        return (2 * (self.__width + self.__height))
+            return 0
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
         """
         Returns a string representation of the rectangle
         """
         if self.__width == 0 or self.__height == 0:
-            return ("")
+            return ""
 
         rectangle_str = ""
         for i in range(self.__height):
             rectangle_str += (str(self.print_symbol) * self.__width + '\n')
-        return (rectangle_str[:-1])
+        return rectangle_str[:-1]
 
     def __repr__(self):
         """
         Returns a string representation of the rectangle to recreate using eval
         """
-        return (f"Rectangle({self.__width}, {self.__height})")
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """
@@ -149,6 +149,6 @@ class Rectangle:
         area_2 = rect_2.area()
 
         if area_1 >= area_2:
-            return (rect_1)
+            return rect_1
         else:
-            return (rect_2)
+            return rect_2

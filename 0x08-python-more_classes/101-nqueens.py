@@ -12,18 +12,18 @@ def is_safe(board, row, col, n):
     #check row on left side
     for i in range(col):
         if board[row][i] == 1:
-            return (False)
+            return False
 
     # Check upper diagonal on the left side
     for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
         if board[i][j] == 1:
-            return (False)
+            return False
 
     # Check lower diagonal on the left side
     for i, j in zip(range(row, n, 1), range(col, -1, -1)):
         if board[i][j] == 1:
-            return (True)
-        return (True)
+            return True
+        return True
 
     def solve_nqueens_util(board, col, n):
         # Base case: If all queens are placed, add solution to result
