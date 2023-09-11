@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Define a BaseGeometry class.
+
 class BaseGeometry:
     """
     A base class for geometry-related operations.
@@ -31,7 +32,8 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
 
-# Define a Rectangle class that inherits from BaseGeometry.
+# Define a Rectangle class that inherits fr BaseGeometry.
+
 class Rectangle(BaseGeometry):
     """
     A class representing a rectangle.
@@ -61,7 +63,7 @@ class Rectangle(BaseGeometry):
         Returns:
             int: The area of the rectangle (width * height).
         """
-        return (self.__width * self.__height)
+        return self.__width * self.__height
 
     def __str__(self):
         """
@@ -70,9 +72,10 @@ class Rectangle(BaseGeometry):
         Returns:
             str: A string description of the rectangle.
         """
-        return ("[Rectangle] {}/{}".format(self.__width, self.__height))
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
 
-# Define a Square class that inherits from Rectangle.
+# Define a Square class that inherits fr Rectangle.
+
 class Square(Rectangle):
     """
     A class representing a square, which is a special case of a rectangle
@@ -99,4 +102,4 @@ class Square(Rectangle):
         Returns:
             str: A string description of the square.
         """
-        return ("[Square] {}/{}".format(self.__size, self.__size))
+        return "[Square] {}/{}".format(self.__size, self.__size)

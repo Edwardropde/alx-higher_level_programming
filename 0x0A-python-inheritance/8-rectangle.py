@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # Define a BaseGeometry class.
+
 class BaseGeometry:
     """
     A base class for geometry-related operations.
@@ -32,6 +33,7 @@ class BaseGeometry:
             raise ValueError("{} must be greater than 0".format(name))
 
 # Define a Rectangle class that inherits from BaseGeometry.
+
 class Rectangle(BaseGeometry):
     """
     A class representing a rectangle.
