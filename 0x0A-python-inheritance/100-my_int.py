@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Define a MyInt class that inherits fr int."""
 
+
 class MyInt(int):
     """A class representing MyInt, which is a rebel integer"""
 
