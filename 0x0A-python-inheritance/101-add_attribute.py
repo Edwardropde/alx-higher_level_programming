@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Define a function that adds a new attribute to an object if possible
+"""Define a function that adds a new attribute to an object"""
 
 def add_attribute(obj, attribute, value):
     """
@@ -12,9 +12,6 @@ def add_attribute(obj, attribute, value):
 
     Raises:
         TypeError: If the object can't have a new attribute.
-
-    Note:
-        This function raises a TypeError if object can't have a new attribute
     """
     if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
