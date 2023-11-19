@@ -3,7 +3,6 @@
 The script lists the states from the `hbtn_0e_0_usa` database
 """
 
-
 import MySQLdb
 from sys import argv
 
