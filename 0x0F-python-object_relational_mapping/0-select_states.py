@@ -2,7 +2,7 @@
 """
 The script lists the states from the `hbtn_0e_0_usa` database
 """
-
+import sys
 import MySQLdb
 from sys import argv
 
@@ -10,12 +10,16 @@ if __name__ == '__main__':
     """
     Access database and get state from it
     """
-    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
-            passwd=argv[2], db=argv[3])
-
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states")
-    rows = cur.fetchall()
-
-    for row in rows:
-        print(row)
+    if len(sys.argv) != 4:
+        print("Usage: {} <username> <password> <database>".format(sys.argv[0]))
+        sys.exit(1)
+        username = sys.argv[1]
+        password = sys.argv[2]
+        database = sys.argv[3]
+        db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM states ORDER BY id")
+        for row in cursor.fetchall():
+            print(row)
+        cursor.close()
+        db.close()
